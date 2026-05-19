@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&family=Syncopate:wght@400;700&family=Michroma&family=Orbitron:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --font-luxury: "Playfair Display", serif;
+  --font-varino: "Syncopate", sans-serif;
+  --font-tech: "Orbitron", sans-serif;
+  
+  --color-navy: #0B1C2D;
+  --color-brand: #6D0F1F;
+  --color-emerald: #00897B;
+  --color-soft-gray: #F5F7FA;
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-4px) scale(1.02); }
+}
+
+.animate-logo-float {
+  animation: logo-float 4s ease-in-out infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-navy font-sans antialiased selection:bg-emerald selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-navy/80 backdrop-blur-lg border border-white/10;
+}
+
+.luxury-text {
+  @apply font-luxury italic;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-soft-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-navy/20 rounded-full hover:bg-navy/40 transition-colors;
+}

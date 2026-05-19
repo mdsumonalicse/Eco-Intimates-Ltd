@@ -1,0 +1,6 @@
+{
+  "name": "Eco Intimates - Premium Apparel Manufacturing",
+  "description": "Premium intimate wear and apparel manufacturer offering sustainable export-quality production for global brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
