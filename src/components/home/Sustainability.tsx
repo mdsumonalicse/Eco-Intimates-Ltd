@@ -145,7 +145,7 @@ export default function Sustainability() {
           >
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-emerald/10 rounded-full flex items-center justify-center">
-                 <Wind size={16} sm={20} className="text-emerald" />
+                 <Wind className="text-emerald w-4 h-4 sm:w-5 sm:h-5" />
                </div>
                <h4 className="text-xs sm:text-sm font-tech font-bold uppercase tracking-widest">Energy Distribution</h4>
             </div>
@@ -192,7 +192,7 @@ export default function Sustainability() {
           >
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-emerald/10 rounded-full flex items-center justify-center">
-                 <TrendingDown size={16} sm={20} className="text-emerald" />
+                 <TrendingDown className="text-emerald w-4 h-4 sm:w-5 sm:h-5" />
                </div>
                <h4 className="text-xs sm:text-sm font-tech font-bold uppercase tracking-widest">Emissions Path</h4>
             </div>
@@ -229,7 +229,7 @@ export default function Sustainability() {
             <div>
               <div className="flex items-center gap-3 mb-6 sm:mb-8">
                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-emerald/10 rounded-full flex items-center justify-center">
-                   <BarChart3 size={16} sm={20} className="text-emerald" />
+                   <BarChart3 className="text-emerald w-4 h-4 sm:w-5 sm:h-5" />
                  </div>
                  <h4 className="text-xs sm:text-sm font-tech font-bold uppercase tracking-widest">Global Standards</h4>
               </div>

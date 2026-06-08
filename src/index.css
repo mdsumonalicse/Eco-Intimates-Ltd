@@ -49,6 +49,11 @@
   @apply font-luxury italic;
 }
 
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.45);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

@@ -40,7 +40,7 @@ export default function Hero({ onOpenTour }: HeroProps) {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,

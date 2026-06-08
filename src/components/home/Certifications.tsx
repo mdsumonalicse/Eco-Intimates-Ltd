@@ -7,19 +7,19 @@ export default function Certifications() {
       name: "OEKO TEX Certification",
       desc: "Mondol Intimates has achieved the OEKO-TEX STANDARD 100, ensuring every component is tested for harmful substances.",
       img: "https://i.postimg.cc/QdMvjZ63/oeko-tex.png",
-      color: "#BE5E8A"
+      tag: "Harmful Substances Tested"
     },
     {
       name: "WRAP Certification",
       desc: "Achieved Gold Level Status in Worldwide Responsible Accredited Production (WRAP), confirming our ethical standards.",
       img: "https://i.postimg.cc/pLrXmPVP/wrap.png",
-      color: "#BE5E8A"
+      tag: "Ethical Manufacturing"
     },
     {
-      name: "Safety First",
+      name: "Safety First Protocol",
       desc: "We prioritize safety above all. We conduct regular fire drills and monthly safety training for all staff and management.",
       img: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800",
-      color: "#BE5E8A"
+      tag: "Operations Safety"
     }
   ];
 
@@ -27,7 +27,7 @@ export default function Certifications() {
     <section className="py-20 lg:py-32 bg-white" id="certifications">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 sm:mb-20">
-          <span className="text-emerald font-tech font-bold tracking-[0.3em] text-[10px] sm:text-xs uppercase mb-4 block italic">Global Compliance</span>
+          <span className="text-emerald font-tech font-bold tracking-[0.3em] text-[10px] sm:text-xs uppercase mb-4 block">Global Compliance</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-tech font-bold text-navy mb-8 uppercase tracking-tighter">
             Our <span className="text-emerald italic">Certifications</span>
           </h2>
@@ -42,27 +42,31 @@ export default function Certifications() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group p-2 rounded-lg transition-all duration-500 shadow-xl overflow-hidden"
-              style={{ backgroundColor: cert.color }}
+              className="group bg-soft-gray hover:bg-navy hover:text-white border border-navy/5 p-4 rounded-[40px] transition-all duration-500 shadow-xl overflow-hidden flex flex-col justify-between"
             >
-              {/* Image Box */}
-              <div className="bg-white rounded-md p-6 aspect-[16/10] flex items-center justify-center overflow-hidden mb-6">
-                <img 
-                  src={cert.img} 
-                  alt={cert.name} 
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              <div>
+                {/* Image Box */}
+                <div className="bg-white rounded-[32px] p-6 aspect-[16/10] flex items-center justify-center overflow-hidden mb-6 shadow-inner">
+                  <img 
+                    src={cert.img} 
+                    alt={cert.name} 
+                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
 
-              {/* Content */}
-              <div className="px-6 pb-8">
-                <h3 className="text-2xl font-display font-bold text-white mb-6 uppercase tracking-tight">
-                  {cert.name}
-                </h3>
-                <p className="text-white/90 text-sm leading-relaxed font-medium">
-                  {cert.desc}
-                </p>
+                {/* Content */}
+                <div className="px-6 pb-6">
+                  <span className="text-[9px] font-tech font-bold uppercase tracking-widest text-emerald mb-2 block">
+                    {cert.tag}
+                  </span>
+                  <h3 className="text-2xl font-tech font-bold text-navy group-hover:text-white mb-4 uppercase tracking-tight">
+                    {cert.name}
+                  </h3>
+                  <p className="text-navy/60 group-hover:text-white/80 text-sm leading-relaxed font-medium">
+                    {cert.desc}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
