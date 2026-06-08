@@ -171,7 +171,11 @@ export default function Footer() {
           <p className="text-white/20 text-xs font-medium">
             © {currentYear} Eco Intimates Limited. All rights reserved.
           </p>
-          <div className="flex gap-8 text-xs font-bold uppercase tracking-widest text-white/20">
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4 text-xs font-bold uppercase tracking-widest text-white/20">
+            <a href="/technical-status" className="hover:text-emerald transition-colors flex items-center gap-2">
+              <div className="w-2 h-2 bg-emerald/50 rounded-full animate-pulse" />
+              Technical Status
+            </a>
             <a href="#" className="hover:text-emerald transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-emerald transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-emerald transition-colors">Sitemap</a>

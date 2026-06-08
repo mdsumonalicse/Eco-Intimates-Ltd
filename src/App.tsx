@@ -12,6 +12,8 @@ import FloatingBot from './components/ui/FloatingBot';
 import HomePage from './pages/HomePage';
 import ProductCatalogPage from './pages/ProductCatalogPage';
 import ServicesPage from './pages/ServicesPage';
+import TechnicalStatusPage from './pages/TechnicalStatusPage';
+import ErrorBoundary from './components/ui/ErrorBoundary';
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,24 +27,27 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="relative min-h-screen">
-        <div className="fixed top-0 left-0 right-0 z-50">
-          <Header />
-        </div>
-        
-        <main className="pt-[70px]">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductCatalogPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-          </Routes>
-        </main>
+    <ErrorBoundary>
+      <Router>
+        <div className="relative min-h-screen">
+          <div className="fixed top-0 left-0 right-0 z-50">
+            <Header />
+          </div>
+          
+          <main className="pt-[70px]">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/products" element={<ProductCatalogPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/technical-status" element={<TechnicalStatusPage />} />
+            </Routes>
+          </main>
 
-        <NewsTicker />
-        <Footer />
-        <FloatingBot />
-      </div>
-    </Router>
+          <NewsTicker />
+          <Footer />
+          <FloatingBot />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
